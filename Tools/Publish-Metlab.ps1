@@ -1,4 +1,4 @@
-# v1.1.0
+# v1.2.0
 # Metlabのバージョン更新、変更履歴、Git commit・tag・pushを一括実行する公開補助スクリプト。
 
 [CmdletBinding()]
@@ -64,11 +64,11 @@ $newEntry = "# 変更履歴`r`n`r`n## $newVersion - $date`r`n`r`n- $releaseNote`
 $body = $oldChangeLog -replace '^# 変更履歴\r?\n\r?\n', ''
 Set-Content -LiteralPath $changeLogPath -Value ($newEntry + $body) -Encoding utf8
 
-Invoke-Git add --all
-Invoke-Git commit -m "Release v$newVersion - $releaseNote"
-Invoke-Git tag -a "v$newVersion" -m "Metlab v$newVersion"
-Invoke-Git push origin main
-Invoke-Git push origin "v$newVersion"
+Invoke-Git -Arguments @('add', '--all')
+Invoke-Git -Arguments @('commit', '-m', "Release v$newVersion - $releaseNote")
+Invoke-Git -Arguments @('tag', '-a', "v$newVersion", '-m', "Metlab v$newVersion")
+Invoke-Git -Arguments @('push', 'origin', 'main')
+Invoke-Git -Arguments @('push', 'origin', "v$newVersion")
 
 Write-Host "公開処理を開始しました: v$newVersion" -ForegroundColor Green
 Write-Host 'GitHub Actionsの完了後、VCCに更新が表示されます。'
