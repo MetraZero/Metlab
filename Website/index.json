@@ -1,0 +1,67 @@
+{
+  "name": "Metlab",
+  "id": "com.metlab.vpm",
+  "url": "https://metrazero.github.io/Metlab/index.json",
+  "author": {
+    "name": "MetraZero",
+    "url": "https://github.com/MetraZero"
+  },
+  "description": "MetraZero制作のVRChat向けパッケージ一覧",
+  "infoLink": {
+    "url": "https://github.com/MetraZero/Metlab",
+    "text": "GitHubで表示"
+  },
+  "packages": {
+    "com.metlab.worlds": {
+      "versions": {
+        "1.0.0": {
+          "name": "com.metlab.worlds",
+          "displayName": "Metlab Worlds",
+          "version": "1.0.0",
+          "unity": "2022.3",
+          "description": "MetraZero制作のVRChatワールド向けUdonSharpスクリプト、Editor拡張、Shaderおよび関連アセットです。",
+          "author": {
+            "name": "MetraZero",
+            "url": "https://github.com/MetraZero"
+          },
+          "license": "MIT",
+          "documentationUrl": "https://github.com/MetraZero/Metlab",
+          "changelogUrl": "https://github.com/MetraZero/Metlab/blob/main/CHANGELOG.md",
+          "vpmDependencies": {
+            "com.vrchat.worlds": ">=3.10.4",
+            "net.kwxxw.yama-stream": ">=2.0.0-beta.6"
+          },
+          "legacyFolders": {
+            "Assets/Metlab": "8951420b593d40046948c827bf02e562"
+          },
+          "url": "https://github.com/MetraZero/Metlab/releases/download/v1.0.0/com.metlab.worlds-1.0.0.zip"
+        }
+      }
+    },
+    "com.metlab.avatars": {
+      "versions": {
+        "1.0.0": {
+          "name": "com.metlab.avatars",
+          "displayName": "Metlab Avatars",
+          "version": "1.0.0",
+          "unity": "2022.3",
+          "description": "MetraZero制作のVRChatアバター向けEditor拡張、Prefabおよび関連アセットです。",
+          "author": {
+            "name": "MetraZero",
+            "url": "https://github.com/MetraZero"
+          },
+          "license": "MIT",
+          "documentationUrl": "https://github.com/MetraZero/Metlab",
+          "changelogUrl": "https://github.com/MetraZero/Metlab/blob/main/CHANGELOG.md",
+          "vpmDependencies": {
+            "com.vrchat.avatars": ">=3.10.4"
+          },
+          "legacyFolders": {
+            "Assets/MetLabo": "9c89d634ec0a85349a87bd148f2f616e"
+          },
+          "url": "https://github.com/MetraZero/Metlab/releases/download/v1.0.0/com.metlab.avatars-1.0.0.zip"
+        }
+      }
+    }
+  }
+}

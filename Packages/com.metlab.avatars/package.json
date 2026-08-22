@@ -1,0 +1,20 @@
+{
+  "name": "com.metlab.avatars",
+  "displayName": "Metlab Avatars",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "description": "MetraZero制作のVRChatアバター向けEditor拡張、Prefabおよび関連アセットです。",
+  "author": {
+    "name": "MetraZero",
+    "url": "https://github.com/MetraZero"
+  },
+  "license": "MIT",
+  "documentationUrl": "https://github.com/MetraZero/Metlab",
+  "changelogUrl": "https://github.com/MetraZero/Metlab/blob/main/CHANGELOG.md",
+  "vpmDependencies": {
+    "com.vrchat.avatars": ">=3.10.4"
+  },
+  "legacyFolders": {
+    "Assets/MetLabo": "9c89d634ec0a85349a87bd148f2f616e"
+  }
+}

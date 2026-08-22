@@ -1,0 +1,22 @@
+# v1.0.0
+# Metlabリポジトリで生成物と一時ファイルを除外する設定。
+
+.DS_Store
+Thumbs.db
+*.user
+*.suo
+*.tmp
+*.bak
+*.log
+
+# Unityが生成する一時領域
+Library/
+Temp/
+Obj/
+Logs/
+UserSettings/
+
+# ローカル移行・検証用ファイル
+.migration/
+Build/
+Dist/

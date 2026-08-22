@@ -1,0 +1,22 @@
+{
+  "name": "Metlab.Worlds",
+  "rootNamespace": "",
+  "references": [
+    "UdonSharp.Runtime",
+    "VRC.SDKBase",
+    "VRC.SDK3",
+    "VRC.Udon",
+    "Unity.TextMeshPro",
+    "UnityEngine.UI",
+    "Yamadev.YamaStream.Runtime"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
