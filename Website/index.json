@@ -2,10 +2,7 @@
   "name": "Metlab",
   "id": "com.metlab.vpm",
   "url": "https://metrazero.github.io/Metlab/index.json",
-  "author": {
-    "name": "MetraZero",
-    "url": "https://github.com/MetraZero"
-  },
+  "author": "MetraZero",
   "description": "MetraZero制作のVRChat向けパッケージ一覧",
   "infoLink": {
     "url": "https://github.com/MetraZero/Metlab",
