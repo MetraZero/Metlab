@@ -1,4 +1,4 @@
-# v1.2.0
+# v1.3.0
 # Metlabのバージョン更新、変更履歴、Git commit・tag・pushを一括実行する公開補助スクリプト。
 
 [CmdletBinding()]
@@ -35,7 +35,8 @@ $suggestedVersion = '{0}.{1}.{2}' -f $currentVersion.Major, $currentVersion.Mino
 $newVersion = Read-Host "新しいバージョン番号（Enterで$suggestedVersion）"
 if ([string]::IsNullOrWhiteSpace($newVersion)) { $newVersion = $suggestedVersion }
 if ($newVersion -notmatch '^\d+\.\d+\.\d+$') { throw 'バージョンは例: 1.0.1 の形式で入力してください。' }
-if (git rev-parse "v$newVersion" 2>$null) { throw "タグ v$newVersion は既に存在します。" }
+git rev-parse --verify --quiet "refs/tags/v$newVersion" | Out-Null
+if ($LASTEXITCODE -eq 0) { throw "タグ v$newVersion は既に存在します。" }
 
 $releaseNote = Read-Host '更新内容を1行で入力'
 if ([string]::IsNullOrWhiteSpace($releaseNote)) { throw '更新内容は必須です。' }
