@@ -2,6 +2,13 @@
 
 MetraZero制作のVRChatワールド／アバター向けスクリプトと関連アセットを管理するリポジトリです。
 
+## ドキュメント
+
+- [機能一覧・各機能の紹介（GitHub Wiki）](https://github.com/MetraZero/Metlab/wiki)
+- [導入方法](https://github.com/MetraZero/Metlab/wiki/Installation)
+- [開発段階と注意事項](https://github.com/MetraZero/Metlab/wiki/Package-Status)
+- [外部依存・謝辞](https://github.com/MetraZero/Metlab/wiki/External-Dependencies)
+
 ## パッケージ
 
 - `com.metlab.worlds`：ワールド向けUdonSharp・Editor拡張・Shader・関連アセット
