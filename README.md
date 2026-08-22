@@ -26,6 +26,8 @@ VCCのカスタムリポジトリへ次のURLを登録します。
 
 公開するときは、ルートにある`Metlabを公開.cmd`を実行し、バージョン番号と更新内容を入力します。
 
+Wiki原稿は`D:\Unity\Metlab.wiki`で管理します。Markdownを編集した後、ルートにある`Wikiを公開.cmd`を実行するとGitHub Wikiへ反映されます。
+
 ## ライセンス
 
 [MIT License](LICENSE)
