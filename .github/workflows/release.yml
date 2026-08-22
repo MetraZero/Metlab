@@ -1,4 +1,4 @@
-# v1.0.0
+# v1.1.0
 # v*タグを受け取り、World/AvatarのVPM ZIPをGitHub Releaseへ公開するワークフロー。
 
 name: Release VPM Packages
@@ -29,3 +29,21 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: gh release create "$GITHUB_REF_NAME" Dist/*.zip --title "Metlab $GITHUB_REF_NAME" --generate-notes
+
+      - name: Update listing checksums
+        shell: bash
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          WORLD_SHA="$(sha256sum "Dist/com.metlab.worlds-$VERSION.zip" | cut -d ' ' -f 1)"
+          AVATAR_SHA="$(sha256sum "Dist/com.metlab.avatars-$VERSION.zip" | cut -d ' ' -f 1)"
+          git fetch origin main
+          git checkout main
+          python Tools/update_listing_checksums.py --version "$VERSION" --world "$WORLD_SHA" --avatar "$AVATAR_SHA"
+          if git diff --quiet -- Website/index.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Website/index.json
+          git commit -m "Add VPM checksums for v$VERSION"
+          git push origin main
