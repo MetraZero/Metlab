@@ -1,7 +1,7 @@
 ﻿// =============================================================
 // MET_GestureCommand.cs
 // MET_ Gesture System - コマンドデータ（1コマンド1オブジェクト）
-// Version: 1.10.1
+// Version: 1.10.2
 //
 // [概要]
 //   「どの方向シーケンスで発動するか」と「発動時に何が起きるか」を
@@ -15,10 +15,9 @@
 //        発動者位置へ移動再生も可）
 //     4. スカイボックス切り替え（ローカル / グローバル ※Late-Joiner対応）
 //     5. YamaPlayer音量調整（現在値へポイント加減算・ローカル / グローバル）
-//     ※（凍結）花火（打ち上げ）アクションは選択肢から除去。花火システム本体
-//       （MET_FireworkLauncher / MET_Firework）は保持しており、必要時に復活可能。
 //
 // [Changelog]
+//   1.10.2 - 削除済み機能に関する未使用コメントを整理。
 //   1.10.1 - グローバル音・グローバル音量が他人に届かない不具合を修正。
 //            BehaviourSyncMode.None では SendCustomNetworkEvent が無効化される
 //            ため、NoVariableSync へ変更（同期変数は持たないので影響なし）。
@@ -28,9 +27,6 @@
 //            ②持たれている場合は先に手放させる（毎フレーム手の位置に上書きされるため）
 //            ③VRC Object Sync に FlagDiscontinuity で不連続を通知（補間で流れるのを防ぐ）
 //            ④他人が持っていた場合は所有権移譲の完了を待って再配置
-//   1.9.0 - 花火システム凍結に伴い、アクション6（花火）をジェスチャーコマンドの
-//           選択肢から除去（花火システム本体・enum MET_FireworkAction は保持）。
-//   1.8.0 - アクション6：花火（打ち上げ）の自動連続発射 Start/Stop/Toggle を追加。
 //   1.7.3 - Stopが一発再生(PlayOneShot)も止められるよう修正（AudioSource無効化でボイスをクリア）。
 //   1.7.2 - グローバル音を「ローカル即再生＋Othersへ送信」に変更（All依存を解消・エディタでも鳴る）。
 //   1.7.1 - soundVolumeを増幅対応(0〜3)に拡張。小さいクリップを持ち上げられるように。
@@ -162,12 +158,6 @@ public class MET_GestureCommand : UdonSharpBehaviour
 
     [Tooltip("ON=全員の音量が変わる（各自の現在値へ増減） / OFF=自分だけ")]
     public bool volumeGlobal = false;
-
-    // ---------------------------------------------------------
-    // ※アクション6（花火）は凍結のため選択肢から除去。
-    //   花火システム本体（MET_FireworkLauncher / MET_Firework）は保持。
-    //   復活時はここへ enableFirework / fireworkLauncher / fireworkAction /
-    //   fireworkGlobal と _DoFirework を戻す（Version 1.8.0 参照）。
 
     // Managerから配布される音量調整対象（YamaStreamのController）
     private Controller _yamaController;

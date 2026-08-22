@@ -1,10 +1,10 @@
 // =============================================================
 // MET_GestureEnums.cs
 // MET_ Gesture System - 共通enum定義
-// Version: 1.5.0
+// Version: 2.0.0
 //
 // [Changelog]
-// 1.5.0 - 花火アクション(MET_FireworkAction)を追加。Start/Stop/Toggle。
+// 2.0.0 - 削除済み機能に関する未使用enumを削除。
 // 1.4.0 - 音アクション(MET_SoundAction)を追加。Play/Stop。
 // 1.3.0 - スカイボックス動作(MET_SkyboxMode)を追加。Set/Flip(A↔B往復)。
 // 1.2.0 - ワープ基準(MET_WarpAnchor)を追加。視点前/手元を選択可能に。
@@ -73,12 +73,4 @@ public enum MET_SoundAction
 {
     Play,   // 鳴らす（soundLoopでループ指定可）
     Stop,   // 指定AudioSourceの再生を止める
-}
-
-/// <summary>花火（打ち上げ）アクションの動作。</summary>
-public enum MET_FireworkAction
-{
-    Start,   // 自動連続発射を開始する
-    Stop,    // 自動連続発射を停止する
-    Toggle,  // 開始/停止を交互に切り替える
 }
