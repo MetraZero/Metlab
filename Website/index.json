@@ -54,7 +54,8 @@
           "legacyFolders": {
             "Assets/Metlab": "8951420b593d40046948c827bf02e562"
           },
-          "url": "https://github.com/MetraZero/Metlab/releases/download/v1.0.1/com.metlab.worlds-1.0.1.zip"
+          "url": "https://github.com/MetraZero/Metlab/releases/download/v1.0.1/com.metlab.worlds-1.0.1.zip",
+          "zipSHA256": "2e8d86b6255d8c51613160ed6f1a98a025348281b7eb50eba8922e5390c9df0e"
         }
       }
     },
@@ -101,7 +102,8 @@
           "legacyFolders": {
             "Assets/MetLabo": "9c89d634ec0a85349a87bd148f2f616e"
           },
-          "url": "https://github.com/MetraZero/Metlab/releases/download/v1.0.1/com.metlab.avatars-1.0.1.zip"
+          "url": "https://github.com/MetraZero/Metlab/releases/download/v1.0.1/com.metlab.avatars-1.0.1.zip",
+          "zipSHA256": "d5ab27668ba938412581f6e648056de946b1e43c1a87db7976896c4b0a644c74"
         }
       }
     }
